@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --main: #121212;
+    --main-two: #242424;
+    --accent-one: #56d6ff;
+    --accent-two: #c855ff;
+    --font-color: #e9f5ff;
+    --bg-gradient: linear-gradient(90deg, rgba(0,123,155,1) 0%, rgba(100,45,155,1) 100%);
+
+    /* Light Mode */
+    --main-light: #ffffff;
+    --main-two-light: #ffffff;
+    --font-color-light: #000000;
+    --bg-gradient-light: linear-gradient(90deg, rgba(0,243,255,1) 0%, rgba(200,85,255,1) 100%);
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color);
+    background: rgb(0,243,255);
+    background: var(--bg-gradient);    
+    filter: drop-shadow(0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.4));
+}
+
+hr {
+    border: none;
+    border-top: 5px solid var(--bg-gradient-light);
+}
+
+.main {
+    background-color: var(--main-two);
+    border-radius: 20px;
+    width: 1050px;
+    margin: 100px;
+    margin-bottom: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-1, .project-2, .project-3 {
+    border-radius: 20px;
+    background-color: var(--main-two);
+    padding: 30px;
+    margin: 10px;
+    width: 290px;
+    text-align: center;
+}
+
+#project-1-link, #project-2-link, #project-3-link {
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+
+}
+#project-1-link:hover, #project-2-link:hover, #project-3-link:hover {
+    transform: scale(1.05);
+}
+
+.mountain-img, .kjslink-img, .harmony-img {
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px;
+}
+
+a:link {
+    color: var(--text-color);
+}
+
+/* visited link */
+a:visited {
+    color: var(--text-color);
+}
+
+/* Dark Mode Switch */
+nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;  
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-two);
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .icon img {
+    display: none;
+    width: 20px;
+    height: 20px;
+  }
+  
+  input:checked + .slider .icon:last-child img {
+    display: block;
+  }
+  
+  input:not(:checked) + .slider .icon:first-child img {
+    display: block;
+  }
+  
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  
