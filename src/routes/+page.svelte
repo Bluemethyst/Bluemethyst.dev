@@ -1,16 +1,9 @@
 <script lang="ts">
     import type { PageData } from "./$types";
-    export let data: PageData[];
-    let repo_data = data;
-    console.log(repo_data);
+    export let data: PageData;
+    let repo_data = data.repos;
 </script>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Bluemethyst</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
 <div class="navbar">
     <nav>
         <a href="https://docs.bluemethyst.dev" target="_blank">Docs</a>
@@ -23,10 +16,10 @@
         + more.
     </h3>
     <div id="buttons-div">
-        <button type="button">Github</button>
-        <button type="button">Discord</button>
+        <button class="button" type="button">Github</button>
+        <button class="button" type="button">Discord</button>
     </div>
-    <h4>Have a look at some of my completed projects. CURRENTLY BROKEN</h4>
+    <h4>Have a look at some of my completed projects.</h4>
 </div>
 <div class="projects">
     {#each repo_data as repo (repo.repo)}

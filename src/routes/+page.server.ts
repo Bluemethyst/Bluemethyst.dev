@@ -9,6 +9,5 @@ export const load = (async () => {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data: RepoData[] = await response.json();
-    console.log(JSON.stringify(data, null, 2));
-    return { data };
+    return { repos: data };
 }) satisfies PageServerLoad;
