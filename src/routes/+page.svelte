@@ -6,7 +6,17 @@
 
 <div class="navbar">
     <nav>
-        <a href="https://docs.bluemethyst.dev" target="_blank">Docs</a>
+        <a class="header-items" href="/">Home</a>
+        <a
+            class="header-items"
+            href="https://docs.bluemethyst.dev"
+            target="_blank">Docs</a
+        >
+        <a
+            class="header-items"
+            href="https://github.com/Bluemethyst"
+            target="_blank">Github</a
+        >
     </nav>
 </div>
 <div class="main">
@@ -16,26 +26,27 @@
         + more.
     </h3>
     <div id="buttons-div">
-        <button class="button" type="button">Github</button>
-        <button class="button" type="button">Discord</button>
+        <a href="https://github.com/Bluemethyst" target="_blank">
+            <button class="button" type="button">Github</button>
+        </a>
+        <a href="https://discord.gg/Sc6Es7QnhH" target="_blank">
+            <button class="button" type="button">Discord</button>
+        </a>
     </div>
     <h4>Have a look at some of my completed projects.</h4>
 </div>
 <div class="projects">
     {#each repo_data as repo (repo.repo)}
-        <div class="project">
-            <h2>{repo.repo}</h2>
-            <p>{repo.description}</p>
-            <a href={repo.link} target="_blank">
+        <a href={repo.link} target="_blank">
+            <div class="project" style="--line-color: {repo.languageColor};">
                 <img src={repo.image} alt={repo.repo} />
-            </a>
-            <p>Language: {repo.language}</p>
-            <p>Stars: {repo.stars}</p>
-            <p>Forks: {repo.forks}</p>
-            {#if repo.website}
-                <a href={repo.website} target="_blank">Website</a>
-            {/if}
-        </div>
+                <h2>{repo.repo}</h2>
+                <p>{repo.description}</p>
+                <p>Language: {repo.language}</p>
+                <p>Stars: {repo.stars}</p>
+                <p>Forks: {repo.forks}</p>
+            </div>
+        </a>
     {/each}
 </div>
 <div id="footer">
