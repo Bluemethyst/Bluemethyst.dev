@@ -1,7 +1,8 @@
 <script lang="ts">
     import type { PageData } from "./$types";
     export let data: PageData[];
-    let repos = data;
+    let repo_data = data;
+    console.log(repo_data);
 </script>
 
 <head>
@@ -28,7 +29,7 @@
     <h4>Have a look at some of my completed projects. CURRENTLY BROKEN</h4>
 </div>
 <div class="projects">
-    {#each repos as repo (repo.repo)}
+    {#each repo_data as repo (repo.repo)}
         <div class="project">
             <h2>{repo.repo}</h2>
             <p>{repo.description}</p>

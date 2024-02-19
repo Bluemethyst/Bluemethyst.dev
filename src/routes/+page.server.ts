@@ -10,5 +10,5 @@ export const load = (async () => {
     }
     const data: RepoData[] = await response.json();
     console.log(JSON.stringify(data, null, 2));
-    return { props: { repos: data } };
+    return { data };
 }) satisfies PageServerLoad;
