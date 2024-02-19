@@ -25,7 +25,7 @@
         <button type="button">Github</button>
         <button type="button">Discord</button>
     </div>
-    <h4>Have a look at some of my completed projects.</h4>
+    <h4>Have a look at some of my completed projects. CURRENTLY BROKEN</h4>
 </div>
 <div class="projects">
     {#each repos as repo (repo.repo)}
