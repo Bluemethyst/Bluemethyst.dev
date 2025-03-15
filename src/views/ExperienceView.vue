@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Particles from "@/components/Particles.vue";
-import NavBar from "@/components/NavBar.vue";
+import Navbar from "@/components/Navbar.vue";
 import Terminal from "@/components/Terminal.vue";
 import { fetchFileText } from "@/funcs";
 import { onMounted, ref } from "vue";
@@ -14,7 +14,7 @@ onMounted(async () => {
 
 <template>
     <main>
-        <NavBar />
+        <Navbar />
         <Particles />
         <Terminal
             command="
